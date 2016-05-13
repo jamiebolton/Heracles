@@ -6,4 +6,4 @@
 
 项目架构:SpringMVC+MyBatis+Shiro+Activiti+EasyUI
 
-项目模块:
+参考项目:Springside,jeesite,jeecg,jfinal
