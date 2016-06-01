@@ -4,6 +4,7 @@
 
 项目周期:迭代+长期
 
-项目架构:SpringMVC+MyBatis+Shiro+Activiti+EasyUI
+项目架构:SpringMVC+MyBatis+Shiro+Activiti+Bootstrap
 
-参考项目:Springside,jeesite,jeecg,jfinal
+参考项目:Springside,jeesite,jeecg,jfinal - 精简版的jeesitelite作为初始框架
+
