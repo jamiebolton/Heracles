@@ -1,8 +1,8 @@
 /*!
- * Copyright &copy; 2012-2014 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
  * 
  * 硕正组件封装
- * @author ThinkGem
+ * @author crazypenguin
  * @version 2013-11-09
  */
 

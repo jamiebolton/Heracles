@@ -6,5 +6,5 @@
 
 项目架构:SpringMVC+MyBatis+Shiro+Activiti+Bootstrap
 
-参考项目:Springside,jeesite,jeecg,jfinal - 精简版的jeesitelite作为初始框架
+参考项目:Springside,jee-site,jeecg,jfinal - 使用jee-site_v1.2.6作为初始框架
 

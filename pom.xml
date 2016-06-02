@@ -32,8 +32,16 @@
         <quartz.version>2.2.1</quartz.version>
     </properties>
 
-    <!-- OSChina的Maven仓库 -->
+    <!-- Maven主仓库 -->
     <repositories>
+        <!-- 如有Nexus私服, 取消注释并指向正确的服务器地址.
+		<repository>
+			<id>nexus-repos</id>
+			<name>Team Nexus Repository</name>
+			<url>http://192.168.11.36:8888/nexus/content/groups/public</url>
+		</repository> -->
+
+        <!-- OSChina的Maven主仓库,一般只要用OSChina的仓库和插件就可以了 -->
         <repository>
             <id>oschinaRepository</id>
             <name>local private nexus</name>
@@ -45,10 +53,68 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+
+        <!-- 第三方仓库 -->
+        <repository>
+            <id>java-repos</id>
+            <name>Java Repository</name>
+            <url>http://download.java.net/maven/2/</url>
+        </repository>
+
+        <repository>
+            <id>springsource-repos</id>
+            <name>SpringSource Repository</name>
+            <url>http://repo.spring.io/release/</url>
+        </repository>
+
+        <repository>
+            <id>central-repos</id>
+            <name>Central Repository</name>
+            <url>http://repo.maven.apache.org/maven2</url>
+        </repository>
+
+        <repository>
+            <id>central-repos2</id>
+            <name>Central Repository 2</name>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+
+        <repository>
+            <id>activiti-repos</id>
+            <name>Activiti Repository</name>
+            <url>https://maven.alfresco.com/nexus/content/groups/public</url>
+        </repository>
+
+        <repository>
+            <id>activiti-repos2</id>
+            <name>Activiti Repository 2</name>
+            <url>https://app.camunda.com/nexus/content/groups/public</url>
+        </repository>
+
+        <repository>
+            <id>thinkgem-repos</id>
+            <name>ThinkGem Repository</name>
+            <url>http://git.oschina.net/thinkgem/repos/raw/master</url>
+        </repository>
+
+        <repository>
+            <id>thinkgem-repos2</id>
+            <name>ThinkGem Repository 2</name>
+            <url>https://raw.github.com/thinkgem/repository/master</url>
+        </repository>
     </repositories>
 
-    <!-- OSChina的Maven插件仓库 -->
+    <!-- Maven插件仓库 -->
     <pluginRepositories>
+
+        <!-- 如有Nexus私服, 取消注释并指向正确的服务器地址.
+		<pluginRepository>
+			<id>nexus-repos</id>
+			<name>Team Nexus Repository</name>
+			<url>http://192.168.11.36:8888/nexus/content/groups/public</url>
+		</pluginRepository> -->
+
+        <!-- OSChina的Maven插件仓库 -->
         <pluginRepository>
             <id>oschinaPluginRepository</id>
             <name>local private nexus</name>
@@ -89,6 +155,19 @@
             <artifactId>log4jdbc-log4j2-jdbc4</artifactId>
             <version>1.15</version>
             <scope>runtime</scope>
+        </dependency>
+
+        <!-- logback包含了core -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.logback-extensions</groupId>
+            <artifactId>logback-ext-spring</artifactId>
+            <version>0.1.4</version>
         </dependency>
 
         <!-- 数据库相关依赖 -->
@@ -146,6 +225,30 @@
         </dependency>
 
         <!-- Spring相关依赖 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-logging</artifactId>
+                    <groupId>commons-logging</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-logging</artifactId>
+                    <groupId>commons-logging</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
@@ -207,6 +310,19 @@
             <version>3.2.2</version>
         </dependency>
 
+        <!--解析客户端操作系统、浏览器等-->
+        <dependency>
+            <groupId>eu.bitwalker</groupId>
+            <artifactId>UserAgentUtils</artifactId>
+            <version>1.19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+
         <!-- MyBatis相关依赖 -->
         <dependency>
             <groupId>org.mybatis</groupId>
@@ -265,6 +381,11 @@
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-ehcache</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-quartz</artifactId>
             <version>${shiro.version}</version>
         </dependency>
 
@@ -359,6 +480,19 @@
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
             <version>2.9.3</version>
+        </dependency>
+
+        <!-- 正则表达式 -->
+        <dependency>
+            <groupId>jakarta-regexp</groupId>
+            <artifactId>jakarta-regexp</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>oro</groupId>
+            <artifactId>oro</artifactId>
+            <version>2.0.8</version>
         </dependency>
 
         <!-- json/xml/对象转换 相关依赖 -->
@@ -513,13 +647,6 @@
             <version>2012_u6</version>
         </dependency>
 
-        <!--解析客户端操作系统、浏览器等-->
-        <dependency>
-            <groupId>eu.bitwalker</groupId>
-            <artifactId>UserAgentUtils</artifactId>
-            <version>1.19</version>
-        </dependency>
-
         <!-- bsh -->
         <dependency>
             <groupId>org.beanshell</groupId>
@@ -534,7 +661,6 @@
             <version>1.7</version>
         </dependency>
 
-        <!-- zip中文乱码 -->
         <dependency>
             <groupId>org.apache.ant</groupId>
             <artifactId>ant</artifactId>
@@ -572,6 +698,7 @@
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
         </dependency>
+
     </dependencies>
 
     <build>

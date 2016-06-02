@@ -1,5 +1,5 @@
 rem @echo off
-rem author thinkgem@163.com
+rem author crazypenguin@aliyun.com
 rem echo Compressor JS and CSS?
 rem pause
 setlocal enabledelayedexpansion
