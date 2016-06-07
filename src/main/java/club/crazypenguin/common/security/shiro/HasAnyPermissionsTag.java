@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.security.shiro;
 
 import org.apache.shiro.subject.Subject;
@@ -9,7 +6,9 @@ import org.apache.shiro.web.tags.PermissionTag;
 /**
  * Shiro HasAnyPermissions Tag.
  * 
- * @author calvin
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class HasAnyPermissionsTag extends PermissionTag {
 

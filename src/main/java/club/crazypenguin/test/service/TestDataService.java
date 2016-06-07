@@ -1,22 +1,20 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.test.service;
-
-import java.util.List;
 
 import club.crazypenguin.common.persistence.Page;
 import club.crazypenguin.common.service.CrudService;
+import club.crazypenguin.test.dao.TestDataDao;
 import club.crazypenguin.test.entity.TestData;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import club.crazypenguin.test.dao.TestDataDao;
+import java.util.List;
 
 /**
  * 单表生成Service
+ *
  * @author crazypenguin
- * @version 2015-04-06
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Service
 @Transactional(readOnly = true)

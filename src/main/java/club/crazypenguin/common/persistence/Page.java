@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -16,9 +13,10 @@ import java.util.regex.Pattern;
 
 /**
  * 分页类
+ *
  * @author crazypenguin
- * @version 2013-7-2
- * @param <T>
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class Page<T> {
 	

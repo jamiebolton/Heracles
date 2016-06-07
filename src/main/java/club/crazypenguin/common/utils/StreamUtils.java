@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils;
 
 import java.io.ByteArrayInputStream;
@@ -14,9 +11,11 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 
 /**
- * 
- * @author Andy.Chen
- * @mail Chenjunjun.ZJ@gmail.com
+ * 流转换工具类
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  * 
  */
 public class StreamUtils {
@@ -116,8 +115,7 @@ public class StreamUtils {
 	/**
 	 * 将InputStream转换成byte数组
 	 * 
-	 * @param in
-	 *            InputStream
+	 * @param in InputStream
 	 * @return byte[]
 	 * @throws IOException
 	 */
@@ -203,7 +201,7 @@ public class StreamUtils {
 	/**
 	 * 根据文件路径创建文件输入流处理
 	 * 以字节为单位（非 unicode ）
-	 * @param path
+	 * @param filepath
 	 * @return
 	 */
 	public static FileInputStream getFileInputStream(String filepath) {
@@ -219,7 +217,7 @@ public class StreamUtils {
 	/**
 	 * 根据文件对象创建文件输入流处理
 	 * 以字节为单位（非 unicode ）
-	 * @param path
+	 * @param file
 	 * @return
 	 */
 	public static FileInputStream getFileInputStream(File file) {
@@ -252,7 +250,7 @@ public class StreamUtils {
 	/**
 	 * 根据文件路径创建文件输出流处理
 	 * 以字节为单位（非 unicode ）
-	 * @param path
+	 * @param filepath
 	 * @param append true:文件以追加方式打开,false:则覆盖原文件的内容
 	 * @return
 	 */

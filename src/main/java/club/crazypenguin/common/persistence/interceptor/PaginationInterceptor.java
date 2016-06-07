@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence.interceptor;
 
 import club.crazypenguin.common.persistence.Page;
@@ -22,8 +19,10 @@ import java.util.Properties;
 
 /**
  * 数据库分页插件，只拦截查询语句.
- * @author poplar.yfyang / crazypenguin
- * @version 2013-8-28
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 @Intercepts({@Signature(type = Executor.class, method = "query",
         args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class})})

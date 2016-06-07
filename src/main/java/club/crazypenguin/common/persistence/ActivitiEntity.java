@@ -1,29 +1,28 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence;
+
+import club.crazypenguin.modules.act.entity.Act;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.io.Serializable;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import club.crazypenguin.modules.act.entity.Act;
-
 /**
  * Activiti Entity类
+ *
  * @author crazypenguin
- * @version 2013-05-28
+ * @version 1.0
+ * @created 2016/6/2
  */
-public abstract class ActEntity<T> extends DataEntity<T> implements Serializable {
+public abstract class ActivitiEntity<T> extends DataEntity<T> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	protected Act act; 		// 流程任务对象
 
-	public ActEntity() {
+	public ActivitiEntity() {
 		super();
 	}
 	
-	public ActEntity(String id) {
+	public ActivitiEntity(String id) {
 		super(id);
 	}
 	

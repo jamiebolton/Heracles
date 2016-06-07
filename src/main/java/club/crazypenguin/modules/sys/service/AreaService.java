@@ -1,22 +1,20 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.service;
 
-import java.util.List;
-
 import club.crazypenguin.common.service.TreeService;
+import club.crazypenguin.modules.sys.dao.AreaDao;
 import club.crazypenguin.modules.sys.entity.Area;
 import club.crazypenguin.modules.sys.utils.UserUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import club.crazypenguin.modules.sys.dao.AreaDao;
+import java.util.List;
 
 /**
  * 区域Service
+ *
  * @author crazypenguin
- * @version 2014-05-16
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Service
 @Transactional(readOnly = true)

@@ -1,14 +1,10 @@
-/**
- * Copyright (c) 2005-2012 springside.org.cn
- */
 package club.crazypenguin.common.mapper;
+
+import com.google.common.collect.Lists;
+import org.dozer.DozerBeanMapper;
 
 import java.util.Collection;
 import java.util.List;
-
-import org.dozer.DozerBeanMapper;
-
-import com.google.common.collect.Lists;
 
 /**
  * 简单封装Dozer, 实现深度转换Bean<->Bean的Mapper.实现:
@@ -18,8 +14,9 @@ import com.google.common.collect.Lists;
  * 3. 批量转换Collection中的所有对象.
  * 4. 区分创建新的B对象与将对象A值复制到已存在的B对象两种函数.
  * 
- * @author calvin
- * @version 2013-01-15
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class BeanMapper {
 

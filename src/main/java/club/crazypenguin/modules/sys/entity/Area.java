@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.entity;
 
 import org.hibernate.validator.constraints.Length;
@@ -9,18 +6,22 @@ import club.crazypenguin.common.persistence.TreeEntity;
 
 /**
  * 区域Entity
+ *
  * @author crazypenguin
- * @version 2013-05-15
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class Area extends TreeEntity<Area> {
 
 	private static final long serialVersionUID = 1L;
-//	private Area parent;	// 父级编号
-//	private String parentIds; // 所有父级编号
 	private String code; 	// 区域编码
-//	private String name; 	// 区域名称
-//	private Integer sort;		// 排序
 	private String type; 	// 区域类型（1：国家；2：省份、直辖市；3：地市；4：区县）
+
+	// 通过TreeEntity继承
+	//	private Area parent;	// 父级编号
+	//	private String parentIds; // 所有父级编号
+	//	private String name; 	// 区域名称
+	//	private Integer sort;		// 排序
 	
 	public Area(){
 		super();

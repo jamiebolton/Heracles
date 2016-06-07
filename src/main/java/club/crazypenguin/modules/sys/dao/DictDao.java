@@ -1,18 +1,17 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.dao;
-
-import java.util.List;
 
 import club.crazypenguin.common.persistence.CrudDao;
 import club.crazypenguin.common.persistence.annotation.MyBatisDao;
 import club.crazypenguin.modules.sys.entity.Dict;
 
+import java.util.List;
+
 /**
  * 字典DAO接口
+ *
  * @author crazypenguin
- * @version 2014-05-16
+ * @version 1.0
+ * @created 2016/5/20
  */
 @MyBatisDao
 public interface DictDao extends CrudDao<Dict> {

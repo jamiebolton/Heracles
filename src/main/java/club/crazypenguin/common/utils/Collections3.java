@@ -1,23 +1,17 @@
-/**
- * Copyright (c) 2005-2012 springside.org.cn
- */
 package club.crazypenguin.common.utils;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.*;
+
 /**
  * Collections工具集.
  * 在JDK的Collections和Guava的Collections2后, 命名为Collections3.
- * @author calvin
- * @version 2013-01-15
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 @SuppressWarnings("rawtypes")
 public class Collections3 {

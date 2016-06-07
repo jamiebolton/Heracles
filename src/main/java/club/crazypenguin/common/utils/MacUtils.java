@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils;
 
 import java.io.BufferedReader;
@@ -11,7 +8,8 @@ import java.io.InputStreamReader;
  * MAC地址工具
  * 
  * @author crazypenguin
- * @version 2013-12-21
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class MacUtils {
 

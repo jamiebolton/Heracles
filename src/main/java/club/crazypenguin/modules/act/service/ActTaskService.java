@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.act.service;
 
 import java.io.InputStream;
@@ -59,8 +56,10 @@ import club.crazypenguin.modules.sys.entity.User;
 
 /**
  * 流程定义相关Service
+ *
  * @author crazypenguin
- * @version 2013-11-03
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Service
 @Transactional(readOnly = true)

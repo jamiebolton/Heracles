@@ -13,8 +13,10 @@ import org.restlet.routing.Router;
 
 /**
  * Activit Rest
+ *
  * @author crazypenguin
- * @version 2013-11-03
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class ActRestApplication extends ActivitiRestApplication {
 

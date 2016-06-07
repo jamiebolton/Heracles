@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence.proxy;
 
 import org.apache.ibatis.binding.MapperRegistry;
@@ -8,13 +5,11 @@ import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSession;
 
 /**
- * <p>
  * 自定义Mybatis的配置，扩展.
- * </p>
  *
- * @author poplar.yfyang
- * @version 1.0 2012-05-13 上午10:06
- * @since JDK 1.5
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class PageConfiguration extends Configuration {
 	

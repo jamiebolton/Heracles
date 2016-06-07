@@ -1,11 +1,4 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils;
-
-import java.io.Serializable;
-import java.security.SecureRandom;
-import java.util.UUID;
 
 import org.activiti.engine.impl.cfg.IdGenerator;
 import org.apache.shiro.session.Session;
@@ -13,10 +6,16 @@ import org.apache.shiro.session.mgt.eis.SessionIdGenerator;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
+import java.security.SecureRandom;
+import java.util.UUID;
+
 /**
  * 封装各种生成唯一性ID算法的工具类.
+ *
  * @author crazypenguin
- * @version 2013-01-15
+ * @version 1.0
+ * @created 2016/6/2
  */
 @Service
 @Lazy(false)

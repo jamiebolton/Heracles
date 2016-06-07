@@ -1,23 +1,16 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.supcan.annotation.treelist;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Inherited;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-
 import club.crazypenguin.common.supcan.annotation.common.fonts.SupFont;
-import club.crazypenguin.common.supcan.annotation.treelist.cols.SupGroup;
 import club.crazypenguin.common.supcan.annotation.common.properties.SupProperties;
+import club.crazypenguin.common.supcan.annotation.treelist.cols.SupGroup;
+
+import java.lang.annotation.*;
 
 /**
  * 硕正TreeList注解
  * @author WangZhen
  * @version 2013-11-12
- * @see 在类上添加注解，应用实例：
+ * 在类上添加注解，应用实例：
 
 @SupTreeList(
 	properties=@SupProperties(headerFontIndex="2", curSelBgColor="#ccddcc",

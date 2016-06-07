@@ -1,28 +1,19 @@
-/**
- * Copyright (c) 2005-2012 springside.org.cn
- */
 package club.crazypenguin.common.mapper;
 
+import club.crazypenguin.common.utils.Exceptions;
+import club.crazypenguin.common.utils.Reflections;
+import club.crazypenguin.common.utils.StringUtils;
+import org.springframework.http.converter.HttpMessageConversionException;
+import org.springframework.util.Assert;
+
+import javax.xml.bind.*;
+import javax.xml.bind.annotation.XmlAnyElement;
+import javax.xml.namespace.QName;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.XmlAnyElement;
-import javax.xml.namespace.QName;
-
-import org.springframework.http.converter.HttpMessageConversionException;
-import org.springframework.util.Assert;
-
-import club.crazypenguin.common.utils.Exceptions;
-import club.crazypenguin.common.utils.Reflections;
-import club.crazypenguin.common.utils.StringUtils;
 
 /**
  * 使用Jaxb2.0实现XML<->Java Object的Mapper.
@@ -30,8 +21,9 @@ import club.crazypenguin.common.utils.StringUtils;
  * 在创建时需要设定所有需要序列化的Root对象的Class.
  * 特别支持Root对象是Collection的情形.
  * 
- * @author calvin
- * @version 2013-01-15
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 @SuppressWarnings("rawtypes")
 public class JaxbMapper {

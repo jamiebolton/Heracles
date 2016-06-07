@@ -1,21 +1,18 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.web;
 
-import javax.servlet.http.HttpServletRequest;
-
+import club.crazypenguin.common.web.BaseController;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import club.crazypenguin.common.web.BaseController;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 标签Controller
  * @author crazypenguin
- * @version 2013-3-23
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Controller
 @RequestMapping(value = "${adminPath}/tag")

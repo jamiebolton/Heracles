@@ -1,12 +1,4 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.service;
-
-import java.util.Collection;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
 
 import club.crazypenguin.common.config.Global;
 import club.crazypenguin.common.persistence.Page;
@@ -21,8 +13,12 @@ import club.crazypenguin.common.web.Servlets;
 import club.crazypenguin.modules.sys.dao.MenuDao;
 import club.crazypenguin.modules.sys.dao.RoleDao;
 import club.crazypenguin.modules.sys.dao.UserDao;
+import club.crazypenguin.modules.sys.entity.Menu;
+import club.crazypenguin.modules.sys.entity.Office;
 import club.crazypenguin.modules.sys.entity.Role;
+import club.crazypenguin.modules.sys.entity.User;
 import club.crazypenguin.modules.sys.security.SystemAuthorizingRealm;
+import club.crazypenguin.modules.sys.utils.LogUtils;
 import club.crazypenguin.modules.sys.utils.UserUtils;
 import org.activiti.engine.IdentityService;
 import org.activiti.engine.identity.Group;
@@ -32,15 +28,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import club.crazypenguin.modules.sys.entity.Menu;
-import club.crazypenguin.modules.sys.entity.Office;
-import club.crazypenguin.modules.sys.entity.User;
-import club.crazypenguin.modules.sys.utils.LogUtils;
+import java.util.Collection;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * 系统管理，安全相关实体的管理类,包括用户、角色、菜单.
+ *
  * @author crazypenguin
- * @version 2013-12-05
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Service
 @Transactional(readOnly = true)
@@ -112,7 +110,7 @@ public class SystemService extends BaseService implements InitializingBean {
 
 	/**
 	 * 通过部门ID获取用户列表，仅返回用户id和name（树查询用户时用）
-	 * @param user
+	 * @param officeId
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")

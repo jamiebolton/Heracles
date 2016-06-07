@@ -1,18 +1,17 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils;
-
-import javax.servlet.http.HttpServletRequest;
 
 import eu.bitwalker.useragentutils.Browser;
 import eu.bitwalker.useragentutils.DeviceType;
 import eu.bitwalker.useragentutils.UserAgent;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * 用户代理字符串识别工具
+ *
  * @author crazypenguin
- * @version 2014-6-13
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class UserAgentUtils {
 

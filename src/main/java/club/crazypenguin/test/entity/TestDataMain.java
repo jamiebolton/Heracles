@@ -1,23 +1,21 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.test.entity;
 
-import club.crazypenguin.modules.sys.entity.Area;
-import club.crazypenguin.modules.sys.entity.User;
-import club.crazypenguin.modules.sys.entity.Office;
-import org.hibernate.validator.constraints.Length;
-import java.util.Date;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import java.util.List;
-import com.google.common.collect.Lists;
-
 import club.crazypenguin.common.persistence.DataEntity;
+import club.crazypenguin.modules.sys.entity.Area;
+import club.crazypenguin.modules.sys.entity.Office;
+import club.crazypenguin.modules.sys.entity.User;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.google.common.collect.Lists;
+import org.hibernate.validator.constraints.Length;
+
+import java.util.Date;
+import java.util.List;
 
 /**
  * 主子表生成Entity
  * @author crazypenguin
- * @version 2015-04-06
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class TestDataMain extends DataEntity<TestDataMain> {
 	

@@ -1,19 +1,15 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.security;
 
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.List;
-
-import javax.annotation.PostConstruct;
-
 import club.crazypenguin.common.config.Global;
+import club.crazypenguin.common.servlet.ValidateCodeServlet;
 import club.crazypenguin.common.utils.Encodes;
 import club.crazypenguin.common.utils.SpringContextHolder;
 import club.crazypenguin.common.web.Servlets;
+import club.crazypenguin.modules.sys.entity.Menu;
 import club.crazypenguin.modules.sys.entity.Role;
+import club.crazypenguin.modules.sys.entity.User;
+import club.crazypenguin.modules.sys.service.SystemService;
+import club.crazypenguin.modules.sys.utils.LogUtils;
 import club.crazypenguin.modules.sys.utils.UserUtils;
 import club.crazypenguin.modules.sys.web.LoginController;
 import org.apache.commons.lang3.StringUtils;
@@ -33,16 +29,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import club.crazypenguin.common.servlet.ValidateCodeServlet;
-import club.crazypenguin.modules.sys.entity.Menu;
-import club.crazypenguin.modules.sys.entity.User;
-import club.crazypenguin.modules.sys.service.SystemService;
-import club.crazypenguin.modules.sys.utils.LogUtils;
+import javax.annotation.PostConstruct;
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * 系统安全认证实现类
+ *
  * @author crazypenguin
- * @version 2014-7-5
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Service
 //@DependsOn({"userDao","roleDao","menuDao"})

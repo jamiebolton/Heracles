@@ -1,19 +1,18 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.entity;
-
-import java.util.Date;
-import java.util.Map;
 
 import club.crazypenguin.common.persistence.DataEntity;
 import club.crazypenguin.common.utils.StringUtils;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
+import java.util.Date;
+import java.util.Map;
+
 /**
  * 日志Entity
+ *
  * @author crazypenguin
- * @version 2014-8-19
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class Log extends DataEntity<Log> {
 

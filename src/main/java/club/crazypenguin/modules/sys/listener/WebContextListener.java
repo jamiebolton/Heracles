@@ -1,11 +1,17 @@
 package club.crazypenguin.modules.sys.listener;
 
-import javax.servlet.ServletContext;
-
+import club.crazypenguin.modules.sys.service.SystemService;
 import org.springframework.web.context.WebApplicationContext;
 
-import club.crazypenguin.modules.sys.service.SystemService;
+import javax.servlet.ServletContext;
 
+/**
+ * web端监听器
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/5/20
+ */
 public class WebContextListener extends org.springframework.web.context.ContextLoaderListener {
 	
 	@Override

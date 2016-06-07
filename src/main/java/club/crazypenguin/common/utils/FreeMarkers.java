@@ -1,23 +1,21 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils;
+
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import org.springframework.core.io.DefaultResourceLoader;
+import org.springframework.core.io.Resource;
 
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Map;
 
-import org.springframework.core.io.DefaultResourceLoader;
-import org.springframework.core.io.Resource;
-
-import freemarker.template.Configuration;
-import freemarker.template.Template;
-
 /**
  * FreeMarkers工具类
+ *
  * @author crazypenguin
- * @version 2013-01-15
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class FreeMarkers {
 

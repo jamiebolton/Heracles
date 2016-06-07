@@ -16,9 +16,10 @@ import java.util.Hashtable;
  * 条形码和二维码编码解码
  * 
  * @author crazypenguin
- * @version 2014-02-28
+ * @version 1.0
+ * @created 2016/6/2
  */
-public class ZxingHandler {
+public class BarCodeUtils {
 
 	/**
 	 * 条形码编码
@@ -136,10 +137,10 @@ public class ZxingHandler {
 		String contents = "6923450657713";
 		int width = 105, height = 50;
 		
-		ZxingHandler.encode(contents, width, height, imgPath);
+		BarCodeUtils.encode(contents, width, height, imgPath);
 		System.out.println("finished zxing EAN-13 encode.");
 
-		String decodeContent = ZxingHandler.decode(imgPath);
+		String decodeContent = BarCodeUtils.decode(imgPath);
 		System.out.println("解码内容如下：" + decodeContent);
 		System.out.println("finished zxing EAN-13 decode.");
 		
@@ -150,10 +151,10 @@ public class ZxingHandler {
 				+ "\nEMail [ crazypenguin@aliyun.com ]";
 		int width2 = 300, height2 = 300;
 
-		ZxingHandler.encode2(contents2, width2, height2, imgPath2);
+		BarCodeUtils.encode2(contents2, width2, height2, imgPath2);
 		System.out.println("finished zxing encode.");
 
-		String decodeContent2 = ZxingHandler.decode2(imgPath2);
+		String decodeContent2 = BarCodeUtils.decode2(imgPath2);
 		System.out.println("解码内容如下：" + decodeContent2);
 		System.out.println("finished zxing decode.");
 		

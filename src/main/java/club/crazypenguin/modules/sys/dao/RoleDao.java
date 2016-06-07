@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.dao;
 
 import club.crazypenguin.common.persistence.annotation.MyBatisDao;
@@ -9,8 +6,10 @@ import club.crazypenguin.modules.sys.entity.Role;
 
 /**
  * 角色DAO接口
+ *
  * @author crazypenguin
- * @version 2013-12-05
+ * @version 1.0
+ * @created 2016/5/20
  */
 @MyBatisDao
 public interface RoleDao extends CrudDao<Role> {

@@ -3,23 +3,24 @@
  */
 package club.crazypenguin.modules.sys.utils;
 
-import java.util.List;
-import java.util.Map;
-
 import club.crazypenguin.common.mapper.JsonMapper;
 import club.crazypenguin.common.utils.CacheUtils;
 import club.crazypenguin.common.utils.SpringContextHolder;
 import club.crazypenguin.modules.sys.dao.DictDao;
 import club.crazypenguin.modules.sys.entity.Dict;
-import org.apache.commons.lang3.StringUtils;
-
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * 字典工具类
+ *
  * @author crazypenguin
- * @version 2013-5-29
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class DictUtils {
 	

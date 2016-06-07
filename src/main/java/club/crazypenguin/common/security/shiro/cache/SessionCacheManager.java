@@ -1,15 +1,7 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.security.shiro.cache;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Set;
-
-import javax.servlet.http.HttpServletRequest;
-
 import club.crazypenguin.common.web.Servlets;
+import com.google.common.collect.Sets;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.UnavailableSecurityManagerException;
 import org.apache.shiro.cache.Cache;
@@ -21,12 +13,17 @@ import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.collect.Sets;
+import javax.servlet.http.HttpServletRequest;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Set;
 
 /**
  * 自定义授权缓存管理类
+ *
  * @author crazypenguin
- * @version 2014-7-21
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class SessionCacheManager implements CacheManager {
 

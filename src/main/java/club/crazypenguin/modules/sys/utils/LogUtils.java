@@ -3,12 +3,6 @@
  */
 package club.crazypenguin.modules.sys.utils;
 
-import java.lang.reflect.Method;
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
 import club.crazypenguin.common.config.Global;
 import club.crazypenguin.common.utils.CacheUtils;
 import club.crazypenguin.common.utils.Exceptions;
@@ -19,16 +13,22 @@ import club.crazypenguin.modules.sys.dao.MenuDao;
 import club.crazypenguin.modules.sys.entity.Log;
 import club.crazypenguin.modules.sys.entity.Menu;
 import club.crazypenguin.modules.sys.entity.User;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.web.method.HandlerMethod;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
+import javax.servlet.http.HttpServletRequest;
+import java.lang.reflect.Method;
+import java.util.List;
+import java.util.Map;
 
 /**
- * 字典工具类
+ * 日志工具类
+ *
  * @author crazypenguin
- * @version 2014-11-7
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class LogUtils {
 	

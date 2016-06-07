@@ -1,12 +1,10 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.act.service.ext;
 
-import java.util.List;
-import java.util.Map;
-
 import club.crazypenguin.common.utils.SpringContextHolder;
+import club.crazypenguin.modules.act.utils.ActUtils;
+import club.crazypenguin.modules.sys.entity.Role;
+import club.crazypenguin.modules.sys.service.SystemService;
+import com.google.common.collect.Lists;
 import org.activiti.engine.identity.Group;
 import org.activiti.engine.identity.User;
 import org.activiti.engine.identity.UserQuery;
@@ -17,15 +15,15 @@ import org.activiti.engine.impl.persistence.entity.UserEntity;
 import org.activiti.engine.impl.persistence.entity.UserEntityManager;
 import org.springframework.stereotype.Service;
 
-import com.google.common.collect.Lists;
-import club.crazypenguin.modules.act.utils.ActUtils;
-import club.crazypenguin.modules.sys.entity.Role;
-import club.crazypenguin.modules.sys.service.SystemService;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Activiti User Entity Service
+ *
  * @author crazypenguin
- * @version 2013-11-03
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Service
 public class ActUserEntityService extends UserEntityManager {

@@ -6,6 +6,13 @@ import com.drew.imaging.jpeg.*;
 import com.drew.lang.*;
 import java.io.*;
 
+/**
+ * todo ?
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
+ */
 public class ImageGeo {
 	public double lat = 0.0;
 	public double lon = 0.0;
@@ -54,9 +61,9 @@ public class ImageGeo {
 		}
 		System.out.println(filename + ": (" + lat + ", " + lon + ")");
 	}
-	
+
 	public static void main(String[] args) {
-		ImageGeo imageGeo = new ImageGeo(ImageGeo.class.getResource("IMAG0068.jpg").getFile());
+		ImageGeo imageGeo = new ImageGeo(ImageGeo.class.getResource("rog.jpg").getFile());
 		System.out.println(imageGeo.lon+","+imageGeo.lat);
 	}
 

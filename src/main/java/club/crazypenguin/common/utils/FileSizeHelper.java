@@ -3,13 +3,11 @@ package club.crazypenguin.common.utils;
 import java.text.DecimalFormat;
 
 /**
- * <p>
  * 文件大小工具类.
- * </p>
  *
- * @author poplar.yfyang
- * @version 1.0 2013-01-02 12:50 PM
- * @since JDK 1.5
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class FileSizeHelper {
 	public static long ONE_KB = 1024;

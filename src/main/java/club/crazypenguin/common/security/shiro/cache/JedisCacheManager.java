@@ -1,30 +1,26 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.security.shiro.cache;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Set;
-
-import javax.servlet.http.HttpServletRequest;
-
+import club.crazypenguin.common.utils.JedisUtils;
 import club.crazypenguin.common.web.Servlets;
+import com.google.common.collect.Sets;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheException;
 import org.apache.shiro.cache.CacheManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import redis.clients.jedis.Jedis;
 
-import com.google.common.collect.Sets;
-import club.crazypenguin.common.utils.JedisUtils;
+import javax.servlet.http.HttpServletRequest;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Set;
 
 /**
  * 自定义授权缓存管理类
+ *
  * @author crazypenguin
- * @version 2014-7-20
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class JedisCacheManager implements CacheManager {
 

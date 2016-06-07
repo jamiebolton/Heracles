@@ -1,25 +1,22 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.interceptor;
-
-import java.text.SimpleDateFormat;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import club.crazypenguin.common.service.BaseService;
 import club.crazypenguin.common.utils.DateUtils;
+import club.crazypenguin.modules.sys.utils.LogUtils;
 import org.springframework.core.NamedThreadLocal;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import club.crazypenguin.modules.sys.utils.LogUtils;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.text.SimpleDateFormat;
 
 /**
  * 日志拦截器
+ *
  * @author crazypenguin
- * @version 2014-8-19
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class LogInterceptor extends BaseService implements HandlerInterceptor {
 

@@ -4,6 +4,13 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * 计算工作日工具类
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
+ */
 public class WorkDayUtils {
 	
 	public static void main(String[] args) {

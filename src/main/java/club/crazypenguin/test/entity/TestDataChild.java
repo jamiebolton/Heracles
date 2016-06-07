@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.test.entity;
 
 import org.hibernate.validator.constraints.Length;
@@ -10,7 +7,8 @@ import club.crazypenguin.common.persistence.DataEntity;
 /**
  * 主子表生成Entity
  * @author crazypenguin
- * @version 2015-04-06
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class TestDataChild extends DataEntity<TestDataChild> {
 	

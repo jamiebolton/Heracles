@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence.interceptor;
 
 import club.crazypenguin.common.config.Global;
@@ -33,8 +30,10 @@ import java.util.regex.Pattern;
 
 /**
  * SQL工具类
- * @author poplar.yfyang / crazypenguin
- * @version 2013-8-28
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class SQLHelper {
 	
@@ -166,18 +165,18 @@ public class SQLHelper {
     
     /** 
      * 去除qlString的select子句。 
-     * @param hql 
+     * @param qlString
      * @return 
      */  
     @SuppressWarnings("unused")
-	private static String removeSelect(String qlString){  
-        int beginPos = qlString.toLowerCase().indexOf("from");  
-        return qlString.substring(beginPos);  
+	private static String removeSelect(String qlString){
+        int beginPos = qlString.toLowerCase().indexOf("from");
+        return qlString.substring(beginPos);
     }  
       
     /** 
      * 去除hql的orderBy子句。 
-     * @param hql 
+     * @param qlString
      * @return 
      */  
     @SuppressWarnings("unused")

@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence.interceptor;
 
 import club.crazypenguin.common.config.Global;
@@ -26,8 +23,10 @@ import java.util.Properties;
 
 /**
  * Mybatis分页拦截器基类
- * @author poplar.yfyang / crazypenguin
- * @version 2013-8-28
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public abstract class BaseInterceptor implements Interceptor, Serializable {
 	

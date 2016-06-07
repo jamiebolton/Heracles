@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence.interceptor;
 
 import club.crazypenguin.common.persistence.Page;
@@ -21,8 +18,10 @@ import java.util.Properties;
 
 /**
  * Mybatis数据库分页插件，拦截StatementHandler的prepare方法
- * @author poplar.yfyang / crazypenguin
- * @version 2013-8-28
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 @Intercepts({
 	@Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class})

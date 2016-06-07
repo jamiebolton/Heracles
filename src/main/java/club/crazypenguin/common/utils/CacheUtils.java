@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils;
 
 import net.sf.ehcache.Cache;
@@ -9,8 +6,10 @@ import net.sf.ehcache.Element;
 
 /**
  * Cache工具类
+ *
  * @author crazypenguin
- * @version 2013-5-29
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class CacheUtils {
 	

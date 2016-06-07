@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence.proxy;
 
 import club.crazypenguin.common.persistence.Page;
@@ -19,13 +16,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <p>
  * 执行代理类，扩展Mybatis的方式来让其Mapper接口来支持.
- * </p>
  *
- * @author poplar.yfyang
- * @version 1.0 2012-05-13 上午10:09
- * @since JDK 1.5
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class PaginationMapperMethod {
 

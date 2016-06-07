@@ -1,25 +1,23 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.test.entity;
 
-import java.util.Date;
-
+import club.crazypenguin.common.persistence.DataEntity;
 import club.crazypenguin.common.supcan.annotation.treelist.SupTreeList;
 import club.crazypenguin.common.supcan.annotation.treelist.cols.SupCol;
 import club.crazypenguin.common.supcan.annotation.treelist.cols.SupGroup;
-import org.hibernate.validator.constraints.Length;
-
+import club.crazypenguin.modules.sys.entity.Office;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import club.crazypenguin.common.persistence.DataEntity;
-import club.crazypenguin.modules.sys.entity.Office;
+import org.hibernate.validator.constraints.Length;
+
+import java.util.Date;
 
 /**
  * 测试Entity
+ *
  * @author crazypenguin
- * @version 2013-10-17
+ * @version 1.0
+ * @created 2016/5/20
  */
 @SupTreeList(
 	groups={

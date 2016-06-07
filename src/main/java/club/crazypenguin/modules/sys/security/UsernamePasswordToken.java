@@ -1,12 +1,11 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.security;
 
 /**
  * 用户和密码（包含验证码）令牌类
+ *
  * @author crazypenguin
- * @version 2013-5-19
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class UsernamePasswordToken extends org.apache.shiro.authc.UsernamePasswordToken {
 

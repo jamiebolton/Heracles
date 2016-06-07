@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.test.service;
 
 import club.crazypenguin.common.service.CrudService;
@@ -12,8 +9,10 @@ import club.crazypenguin.modules.test.dao.TestDao;
 
 /**
  * 测试Service
+ *
  * @author crazypenguin
- * @version 2013-10-17
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Service
 @Transactional(readOnly = true)

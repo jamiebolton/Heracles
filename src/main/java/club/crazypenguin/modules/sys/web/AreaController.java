@@ -1,15 +1,13 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.web;
 
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletResponse;
-
+import club.crazypenguin.common.config.Global;
+import club.crazypenguin.common.utils.StringUtils;
+import club.crazypenguin.common.web.BaseController;
 import club.crazypenguin.modules.sys.entity.Area;
+import club.crazypenguin.modules.sys.service.AreaService;
 import club.crazypenguin.modules.sys.utils.UserUtils;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,17 +18,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import club.crazypenguin.common.config.Global;
-import club.crazypenguin.common.utils.StringUtils;
-import club.crazypenguin.common.web.BaseController;
-import club.crazypenguin.modules.sys.service.AreaService;
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 区域Controller
  * @author crazypenguin
- * @version 2013-5-15
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Controller
 @RequestMapping(value = "${adminPath}/sys/area")

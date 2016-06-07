@@ -1,25 +1,22 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.web;
 
-import java.io.IOException;
+import club.crazypenguin.common.config.Global;
+import club.crazypenguin.common.utils.FileUtils;
+import club.crazypenguin.modules.sys.security.SystemAuthorizingRealm.Principal;
+import club.crazypenguin.modules.sys.utils.UserUtils;
+import com.ckfinder.connector.ConnectorServlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import club.crazypenguin.common.utils.FileUtils;
-import club.crazypenguin.modules.sys.utils.UserUtils;
-import club.crazypenguin.common.config.Global;
-import club.crazypenguin.modules.sys.security.SystemAuthorizingRealm.Principal;
-
-import com.ckfinder.connector.ConnectorServlet;
+import java.io.IOException;
 
 /**
- * CKFinderConnectorServlet
+ * CKFinder连接控制
+ *
  * @author crazypenguin
- * @version 2014-06-25
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class CKFinderConnectorServlet extends ConnectorServlet {
 	

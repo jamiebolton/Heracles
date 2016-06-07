@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils;
 
 import freemarker.template.Configuration;
@@ -16,7 +13,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 发送电子邮件
+ * 邮件工具类
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class SendMailUtil {
 

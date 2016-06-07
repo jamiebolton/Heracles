@@ -1,20 +1,17 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.act.utils;
 
-import java.util.Map;
-
-import org.apache.commons.beanutils.ConvertUtils;
-
+import club.crazypenguin.common.utils.StringUtils;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.Maps;
-import club.crazypenguin.common.utils.StringUtils;
+import org.apache.commons.beanutils.ConvertUtils;
+
+import java.util.Map;
 
 /**
  * 流程变量对象
  * @author crazypenguin
- * @version 2013-11-03
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class Variable {
 

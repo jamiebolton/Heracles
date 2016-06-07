@@ -1,28 +1,25 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence;
 
-import java.io.Serializable;
-import java.util.Map;
-
-import javax.xml.bind.annotation.XmlTransient;
-
+import club.crazypenguin.common.config.Global;
 import club.crazypenguin.common.supcan.annotation.treelist.SupTreeList;
 import club.crazypenguin.common.supcan.annotation.treelist.cols.SupCol;
 import club.crazypenguin.common.utils.StringUtils;
+import club.crazypenguin.modules.sys.entity.User;
 import club.crazypenguin.modules.sys.utils.UserUtils;
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.Maps;
-import club.crazypenguin.common.config.Global;
-import club.crazypenguin.modules.sys.entity.User;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
+import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
+import java.util.Map;
 
 /**
- * Entity支持类
+ * Entity层基类
+ *
  * @author crazypenguin
- * @version 2014-05-16
+ * @version 1.0
+ * @created 2016/6/2
  */
 @SupTreeList
 public abstract class BaseEntity<T> implements Serializable {

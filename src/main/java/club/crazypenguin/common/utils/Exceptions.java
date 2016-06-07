@@ -1,17 +1,15 @@
-/**
- * Copyright (c) 2005-2012 springside.org.cn
- */
 package club.crazypenguin.common.utils;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import javax.servlet.http.HttpServletRequest;
-
 /**
  * 关于异常的工具类.
- * @author calvin
- * @version 2013-01-15
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class Exceptions {
 

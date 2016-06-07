@@ -1,13 +1,19 @@
 package club.crazypenguin.common.mapper.adapters;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
-
+/**
+ * 自定一个格式化map
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
+ */
 @XmlType(name = "MapConvertor")  
 @XmlAccessorType(XmlAccessType.FIELD)  
 public class MapConvertor {

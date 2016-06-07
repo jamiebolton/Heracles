@@ -1,61 +1,61 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 
 /**
  * Cookie工具类
+ *
  * @author crazypenguin
- * @version 2013-01-15
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class CookieUtils {
 
 	/**
-	 * 设置 Cookie（生成时间为1天）
-	 * @param name 名称
-	 * @param value 值
-	 */
+	 * 设置cookie 生命周期为一天
+	 * @param response
+	 * @param name
+	 * @param value
+     */
 	public static void setCookie(HttpServletResponse response, String name, String value) {
 		setCookie(response, name, value, 60*60*24);
 	}
-	
+
 	/**
-	 * 设置 Cookie
-	 * @param name 名称
-	 * @param value 值
-	 * @param maxAge 生存时间（单位秒）
-	 * @param uri 路径
-	 */
+	 * 带路径的
+	 * @param response
+	 * @param name
+	 * @param value
+     * @param path
+     */
 	public static void setCookie(HttpServletResponse response, String name, String value, String path) {
 		setCookie(response, name, value, path, 60*60*24);
 	}
-	
+
 	/**
-	 * 设置 Cookie
-	 * @param name 名称
-	 * @param value 值
-	 * @param maxAge 生存时间（单位秒）
-	 * @param uri 路径
-	 */
+	 * 光值
+	 * @param response
+	 * @param name
+	 * @param value
+     * @param maxAge
+     */
 	public static void setCookie(HttpServletResponse response, String name, String value, int maxAge) {
 		setCookie(response, name, value, "/", maxAge);
 	}
-	
+
 	/**
-	 * 设置 Cookie
-	 * @param name 名称
-	 * @param value 值
-	 * @param maxAge 生存时间（单位秒）
-	 * @param uri 路径
-	 */
+	 * 带路径和值
+	 * @param response
+	 * @param name
+	 * @param value
+	 * @param path
+     * @param maxAge
+     */
 	public static void setCookie(HttpServletResponse response, String name, String value, String path, int maxAge) {
 		Cookie cookie = new Cookie(name, null);
 		cookie.setPath(path);

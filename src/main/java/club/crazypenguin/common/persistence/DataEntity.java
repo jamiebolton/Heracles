@@ -1,23 +1,21 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence;
 
-import java.util.Date;
-
 import club.crazypenguin.common.utils.IdGen;
+import club.crazypenguin.modules.sys.entity.User;
 import club.crazypenguin.modules.sys.utils.UserUtils;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.constraints.Length;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import club.crazypenguin.modules.sys.entity.User;
+import java.util.Date;
 
 /**
- * 数据Entity类
+ * 业务数据Entity父类 - 主要目的是业务表须包含6个字段
+ *
  * @author crazypenguin
- * @version 2014-05-16
+ * @version 1.0
+ * @created 2016/6/2
  */
 public abstract class DataEntity<T> extends BaseEntity<T> {
 

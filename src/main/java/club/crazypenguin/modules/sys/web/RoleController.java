@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.web;
 
 import java.util.List;
@@ -35,7 +32,8 @@ import club.crazypenguin.modules.sys.service.SystemService;
 /**
  * 角色Controller
  * @author crazypenguin
- * @version 2013-12-05
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Controller
 @RequestMapping(value = "${adminPath}/sys/role")

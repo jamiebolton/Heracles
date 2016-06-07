@@ -1,7 +1,19 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.act.utils;
+
+import club.crazypenguin.common.annotation.FieldName;
+import club.crazypenguin.common.config.Global;
+import club.crazypenguin.common.utils.Encodes;
+import club.crazypenguin.common.utils.ObjectUtils;
+import club.crazypenguin.common.utils.StringUtils;
+import club.crazypenguin.modules.act.entity.Act;
+import club.crazypenguin.modules.sys.entity.Role;
+import club.crazypenguin.modules.sys.entity.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import org.activiti.engine.impl.persistence.entity.GroupEntity;
+import org.activiti.engine.impl.persistence.entity.UserEntity;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -9,26 +21,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import club.crazypenguin.common.annotation.FieldName;
-import club.crazypenguin.common.config.Global;
-import club.crazypenguin.common.utils.Encodes;
-import club.crazypenguin.common.utils.ObjectUtils;
-import club.crazypenguin.common.utils.StringUtils;
-import club.crazypenguin.modules.sys.entity.Role;
-import club.crazypenguin.modules.sys.entity.User;
-import org.activiti.engine.impl.persistence.entity.GroupEntity;
-import org.activiti.engine.impl.persistence.entity.UserEntity;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import club.crazypenguin.modules.act.entity.Act;
-
 /**
  * 流程工具
+ *
  * @author crazypenguin
- * @version 2013-11-03
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class ActUtils {
 

@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.act.entity;
 
 import java.util.Date;
@@ -22,8 +19,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * 工作流Entity
+ *
  * @author crazypenguin
- * @version 2013-11-03
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class Act extends BaseEntity<Act> {
 	

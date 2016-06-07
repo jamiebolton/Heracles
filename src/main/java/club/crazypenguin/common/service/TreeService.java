@@ -1,21 +1,19 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.service;
-
-import java.util.List;
-
-import org.springframework.transaction.annotation.Transactional;
 
 import club.crazypenguin.common.persistence.TreeDao;
 import club.crazypenguin.common.persistence.TreeEntity;
 import club.crazypenguin.common.utils.Reflections;
 import club.crazypenguin.common.utils.StringUtils;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
- * Service基类
+ * Service层树形结构基类
+ *
  * @author crazypenguin
- * @version 2014-05-16
+ * @version 1.0
+ * @created 2016/6/2
  */
 @Transactional(readOnly = true)
 public abstract class TreeService<D extends TreeDao<T>, T extends TreeEntity<T>> extends CrudService<D, T> {

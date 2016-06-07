@@ -1,32 +1,36 @@
 package club.crazypenguin.common.servlet;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import club.crazypenguin.common.config.Global;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.util.UriUtils;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+
 /**
- * 查看CK上传的图片
+ * 查看CKEditor上传的图片
+ *
  * @author crazypenguin
- * @version 2014-06-25
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class UserfilesDownloadServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
+	/**
+	 * 输出图片
+	 * @param req
+	 * @param resp
+	 * @throws ServletException
+	 * @throws IOException
+     */
 	public void fileOutputStream(HttpServletRequest req, HttpServletResponse resp) 
 			throws ServletException, IOException {
 		String filepath = req.getRequestURI();

@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils.excel;
 
 import java.io.File;
@@ -34,8 +31,10 @@ import com.google.common.collect.Lists;
 
 /**
  * 导入Excel文件（支持“XLS”和“XLSX”格式）
+ *
  * @author crazypenguin
- * @version 2013-03-10
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class ImportExcel {
 	

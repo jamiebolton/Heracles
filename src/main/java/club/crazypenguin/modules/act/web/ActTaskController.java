@@ -1,16 +1,10 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.act.web;
 
-import java.io.InputStream;
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import club.crazypenguin.common.persistence.Page;
+import club.crazypenguin.common.web.BaseController;
+import club.crazypenguin.modules.act.entity.Act;
+import club.crazypenguin.modules.act.service.ActTaskService;
+import club.crazypenguin.modules.act.utils.ActUtils;
 import club.crazypenguin.modules.sys.utils.UserUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -22,15 +16,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import club.crazypenguin.common.web.BaseController;
-import club.crazypenguin.modules.act.entity.Act;
-import club.crazypenguin.modules.act.service.ActTaskService;
-import club.crazypenguin.modules.act.utils.ActUtils;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.InputStream;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 流程个人任务相关Controller
  * @author crazypenguin
- * @version 2013-11-03
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Controller
 @RequestMapping(value = "${adminPath}/act/task")
@@ -38,12 +34,15 @@ public class ActTaskController extends BaseController {
 
 	@Autowired
 	private ActTaskService actTaskService;
-	
+
 	/**
 	 * 获取待办列表
-	 * @param procDefKey 流程定义标识
+	 * @param act
+	 * @param response
+	 * @param model
 	 * @return
-	 */
+     * @throws Exception
+     */
 	@RequestMapping(value = {"todo", ""})
 	public String todoList(Act act, HttpServletResponse response, Model model) throws Exception {
 		List<Act> list = actTaskService.todoList(act);
@@ -53,13 +52,16 @@ public class ActTaskController extends BaseController {
 		}
 		return "modules/act/actTaskTodoList";
 	}
-	
+
 	/**
 	 * 获取已办任务
-	 * @param page
-	 * @param procDefKey 流程定义标识
+	 * @param act
+	 * @param request
+	 * @param response
+	 * @param model
 	 * @return
-	 */
+     * @throws Exception
+     */
 	@RequestMapping(value = "historic")
 	public String historicList(Act act, HttpServletRequest request, HttpServletResponse response, Model model) throws Exception {
 		Page<Act> page = new Page<Act>(request, response);
@@ -73,10 +75,12 @@ public class ActTaskController extends BaseController {
 
 	/**
 	 * 获取流转历史列表
-	 * @param procInsId 流程实例
-	 * @param startAct 开始活动节点名称
-	 * @param endAct 结束活动节点名称
-	 */
+	 * @param act
+	 * @param startAct
+	 * @param endAct
+	 * @param model
+     * @return
+     */
 	@RequestMapping(value = "histoicFlow")
 	public String histoicFlow(Act act, String startAct, String endAct, Model model){
 		if (StringUtils.isNotBlank(act.getProcInsId())){
@@ -85,11 +89,15 @@ public class ActTaskController extends BaseController {
 		}
 		return "modules/act/actTaskHistoricFlow";
 	}
-	
+
 	/**
 	 * 获取流程列表
-	 * @param category 流程分类
-	 */
+	 * @param category
+	 * @param request
+	 * @param response
+	 * @param model
+     * @return
+     */
 	@RequestMapping(value = "process")
 	public String processList(String category, HttpServletRequest request, HttpServletResponse response, Model model) {
 	    Page<Object[]> page = new Page<Object[]>(request, response);
@@ -98,15 +106,14 @@ public class ActTaskController extends BaseController {
 		model.addAttribute("category", category);
 		return "modules/act/actTaskProcessList";
 	}
-	
+
 	/**
 	 * 获取流程表单
-	 * @param taskId	任务ID
-	 * @param taskName	任务名称
-	 * @param taskDefKey 任务环节标识
-	 * @param procInsId 流程实例ID
-	 * @param procDefId 流程定义ID
-	 */
+	 * @param act
+	 * @param request
+	 * @param model
+     * @return
+     */
 	@RequestMapping(value = "form")
 	public String form(Act act, HttpServletRequest request, Model model){
 		
@@ -125,13 +132,16 @@ public class ActTaskController extends BaseController {
 //		model.addAttribute("formUrl", formUrl);
 //		return "modules/act/actTaskForm";
 	}
-	
+
 	/**
 	 * 启动流程
-	 * @param procDefKey 流程定义KEY
-	 * @param businessTable 业务表表名
-	 * @param businessId	业务表编号
-	 */
+	 * @param act
+	 * @param table
+	 * @param id
+	 * @param model
+	 * @return
+     * @throws Exception
+     */
 	@RequestMapping(value = "start")
 	@ResponseBody
 	public String start(Act act, String table, String id, Model model) throws Exception {
@@ -141,8 +151,9 @@ public class ActTaskController extends BaseController {
 
 	/**
 	 * 签收任务
-	 * @param taskId 任务ID
-	 */
+	 * @param act
+	 * @return
+     */
 	@RequestMapping(value = "claim")
 	@ResponseBody
 	public String claim(Act act) {
@@ -150,27 +161,26 @@ public class ActTaskController extends BaseController {
 		actTaskService.claim(act.getTaskId(), userId);
 		return "true";//adminPath + "/act/task";
 	}
-	
+
 	/**
 	 * 完成任务
-	 * @param taskId 任务ID
-	 * @param procInsId 流程实例ID，如果为空，则不保存任务提交意见
-	 * @param comment 任务提交意见的内容
-	 * @param vars 任务流程变量，如下
-	 * 		vars.keys=flag,pass
-	 * 		vars.values=1,true
-	 * 		vars.types=S,B  @see PropertyType
-	 */
+	 * @param act
+	 * @return
+     */
 	@RequestMapping(value = "complete")
 	@ResponseBody
 	public String complete(Act act) {
 		actTaskService.complete(act.getTaskId(), act.getProcInsId(), act.getComment(), act.getVars().getVariableMap());
 		return "true";//adminPath + "/act/task";
 	}
-	
+
 	/**
 	 * 读取带跟踪的图片
-	 */
+	 * @param procDefId
+	 * @param execId
+	 * @param response
+	 * @throws Exception
+     */
 	@RequestMapping(value = "trace/photo/{procDefId}/{execId}")
 	public void tracePhoto(@PathVariable("procDefId") String procDefId, @PathVariable("execId") String execId, HttpServletResponse response) throws Exception {
 		InputStream imageStream = actTaskService.tracePhoto(procDefId, execId);
@@ -182,14 +192,13 @@ public class ActTaskController extends BaseController {
 			response.getOutputStream().write(b, 0, len);
 		}
 	}
-	
+
 	/**
 	 * 输出跟踪流程信息
-	 * 
-	 * @param processInstanceId
+	 * @param proInsId
 	 * @return
 	 * @throws Exception
-	 */
+     */
 	@ResponseBody
 	@RequestMapping(value = "trace/info/{proInsId}")
 	public List<Map<String, Object>> traceInfo(@PathVariable("proInsId") String proInsId) throws Exception {

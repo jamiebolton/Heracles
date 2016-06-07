@@ -1,12 +1,11 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence;
 
 /**
- * DAO支持类实现
+ * DAO层基类
+ *
  * @author crazypenguin
- * @version 2014-05-16
+ * @version 1.0
+ * @created 2016/6/2
  */
 public interface BaseDao {
 

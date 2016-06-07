@@ -1,29 +1,34 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence;
+
+import club.crazypenguin.common.utils.Reflections;
+import club.crazypenguin.common.utils.StringUtils;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.validator.constraints.Length;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import club.crazypenguin.common.utils.Reflections;
-import club.crazypenguin.common.utils.StringUtils;
-
 /**
- * 数据Entity类
+ * Entity层树形结构基类
+ *
  * @author crazypenguin
- * @version 2014-05-16
+ * @version 1.0
+ * @created 2016/6/2
  */
 public abstract class TreeEntity<T> extends DataEntity<T> {
 
 	private static final long serialVersionUID = 1L;
 
-	protected T parent;	// 父级编号
-	protected String parentIds; // 所有父级编号
-	protected String name; 	// 机构名称
-	protected Integer sort;		// 排序
+	//父级编号
+	protected T parent;
+
+	//所有父级编号
+	protected String parentIds;
+
+	//名称
+	protected String name;
+
+	//排序
+	protected Integer sort;
 	
 	public TreeEntity() {
 		super();

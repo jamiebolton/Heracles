@@ -1,16 +1,18 @@
 package club.crazypenguin.common.test;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 
+import javax.sql.DataSource;
+
 /**
  * Spring 单元测试基类
+ *
  * @author crazypenguin
- * @version 2013-05-15
+ * @version 1.0
+ * @created 2016/6/2
  */
 @ActiveProfiles("production")
 @ContextConfiguration(locations = {"/spring-context.xml"})

@@ -1,14 +1,5 @@
-/**
- * Copyright (c) 2005-2011 springside.org.cn
- * 
- * $Id: PropertiesLoader.java 1690 2012-02-22 13:42:00Z calvinxiu $
- */
-package club.crazypenguin.common.utils;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.NoSuchElementException;
-import java.util.Properties;
+package club.crazypenguin.common.utils;
 
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
@@ -17,10 +8,18 @@ import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.NoSuchElementException;
+import java.util.Properties;
+
 /**
- * Properties文件载入工具类. 可载入多个properties文件, 相同的属性在最后载入的文件中的值将会覆盖之前的值，但以System的Property优先.
- * @author calvin
- * @version 2013-05-15
+ * Properties文件载入工具类. 可载入多个properties文件, 相同的属性在最后载入的文件中的值将会覆盖之前的值，
+ * 但以System的Property优先.
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class PropertiesLoader {
 

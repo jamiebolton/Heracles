@@ -1,6 +1,3 @@
-/**
- * Copyright (c) 2005-2012 springside.org.cn
- */
 package club.crazypenguin.common.utils;
 
 import java.util.concurrent.ExecutorService;
@@ -8,8 +5,10 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 线程相关工具类.
- * @author calvin
- * @version 2013-01-15
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class Threads {
 

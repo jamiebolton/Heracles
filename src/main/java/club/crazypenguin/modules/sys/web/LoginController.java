@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.web;
 
 import club.crazypenguin.common.config.Global;
@@ -32,7 +29,8 @@ import java.util.Map;
 /**
  * 登录Controller
  * @author crazypenguin
- * @version 2013-5-31
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Controller
 public class LoginController extends BaseController{

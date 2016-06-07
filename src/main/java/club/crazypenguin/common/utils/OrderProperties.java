@@ -1,26 +1,18 @@
 package club.crazypenguin.common.utils;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.util.List;
-import java.util.Properties;
-
 import com.google.common.base.Objects;
 import com.google.common.collect.Lists;
 
+import java.io.*;
+import java.util.List;
+import java.util.Properties;
+
 /**
- * <p>
  * 有序的properties的工具类，由于JDK自身的写会乱序，所以采用这个工具类来保证读写次序正常.
- * </p>
  *
- * @author poplar.yfyang
- * @version 1.0 2013-01-02 12:57 PM
- * @since JDK 1.5
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class OrderProperties extends Properties {
 	/** 序列化ID */

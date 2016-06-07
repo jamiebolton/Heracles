@@ -1,23 +1,21 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.config;
+
+import club.crazypenguin.common.utils.PropertiesLoader;
+import club.crazypenguin.common.utils.StringUtils;
+import com.ckfinder.connector.ServletContextFactory;
+import com.google.common.collect.Maps;
+import org.springframework.core.io.DefaultResourceLoader;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
-import club.crazypenguin.common.utils.StringUtils;
-import org.springframework.core.io.DefaultResourceLoader;
-
-import com.ckfinder.connector.ServletContextFactory;
-import com.google.common.collect.Maps;
-import club.crazypenguin.common.utils.PropertiesLoader;
-
 /**
- * 全局配置类
+ * 全局配置类 - 和fns.tld搭配使用,在页面直接通过标签获取常量
+ *
  * @author crazypenguin
- * @version 2014-06-25
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class Global {
 
@@ -68,7 +66,7 @@ public class Global {
 	
 	/**
 	 * 获取配置
-	 * @see ${fns:getConfig('adminPath')}
+	 * @see \${fns:getConfig('adminPath')}
 	 */
 	public static String getConfig(String key) {
 		String value = map.get(key);
@@ -118,7 +116,7 @@ public class Global {
     
 	/**
 	 * 页面获取常量
-	 * @see ${fns:getConst('YES')}
+	 * @see \${fns:getConst('YES')}
 	 */
 	public static Object getConst(String field) {
 		try {

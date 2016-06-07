@@ -1,23 +1,21 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.act.utils;
 
-import java.util.List;
-
+import club.crazypenguin.common.utils.CacheUtils;
+import club.crazypenguin.common.utils.SpringContextHolder;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity;
 import org.activiti.engine.impl.pvm.process.ActivityImpl;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.apache.commons.lang3.ObjectUtils;
 
-import club.crazypenguin.common.utils.CacheUtils;
-import club.crazypenguin.common.utils.SpringContextHolder;
+import java.util.List;
 
 /**
  * 流程定义缓存
+ *
  * @author crazypenguin
- * @version 2013-12-05
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class ProcessDefCache {
 

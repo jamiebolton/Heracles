@@ -1,15 +1,13 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence;
 
 import java.util.List;
 
 /**
- * DAO支持类实现
+ * DAO层树型结构基类
+ *
  * @author crazypenguin
- * @version 2014-05-16
- * @param <T>
+ * @version 1.0
+ * @created 2016/6/2
  */
 public interface TreeDao<T extends TreeEntity<T>> extends CrudDao<T> {
 

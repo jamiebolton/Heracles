@@ -3,7 +3,7 @@
  */
 package club.crazypenguin.modules.oa.entity;
 
-import club.crazypenguin.common.persistence.ActEntity;
+import club.crazypenguin.common.persistence.ActivitiEntity;
 import club.crazypenguin.modules.sys.entity.Office;
 import club.crazypenguin.modules.sys.entity.User;
 
@@ -12,7 +12,7 @@ import club.crazypenguin.modules.sys.entity.User;
  * @author crazypenguin
  * @version 2014-05-16
  */
-public class TestAudit extends ActEntity<TestAudit> {
+public class TestAudit extends ActivitiEntity<TestAudit> {
 	
 	private static final long serialVersionUID = 1L;
 	private User 	user;	//	归属用户

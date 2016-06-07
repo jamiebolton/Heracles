@@ -1,7 +1,7 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
+
 package club.crazypenguin.common.utils;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -9,12 +9,12 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.Method;
 
-import org.apache.commons.lang3.StringUtils;
-
 /**
  * 对象操作工具类, 继承org.apache.commons.lang3.ObjectUtils类
+ *
  * @author crazypenguin
- * @version 2014-6-29
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class ObjectUtils extends org.apache.commons.lang3.ObjectUtils {
 

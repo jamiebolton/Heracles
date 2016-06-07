@@ -1,21 +1,19 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.entity;
 
-import java.util.List;
-
+import club.crazypenguin.common.config.Global;
+import club.crazypenguin.common.persistence.DataEntity;
+import com.google.common.collect.Lists;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.constraints.Length;
 
-import com.google.common.collect.Lists;
-import club.crazypenguin.common.config.Global;
-import club.crazypenguin.common.persistence.DataEntity;
+import java.util.List;
 
 /**
  * 角色Entity
+ *
  * @author crazypenguin
- * @version 2013-12-05
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class Role extends DataEntity<Role> {
 	

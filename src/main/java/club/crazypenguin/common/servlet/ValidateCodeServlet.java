@@ -1,29 +1,25 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.servlet;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.Random;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.lang3.math.NumberUtils;
-import org.apache.commons.lang3.StringUtils;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Random;
 
 /**
  * 生成随机验证码
+ *
  * @author crazypenguin
- * @version 2014-7-27
+ * @version 1.0
+ * @created 2016/6/2
  */
 @SuppressWarnings("serial")
 public class ValidateCodeServlet extends HttpServlet {
@@ -40,9 +36,17 @@ public class ValidateCodeServlet extends HttpServlet {
 	public void destroy() {
 		super.destroy(); 
 	}
-	
+
+	/**
+	 * 验证码比对
+	 * @param request
+	 * @param validateCode
+     * @return
+     */
 	public static boolean validate(HttpServletRequest request, String validateCode){
 		String code = (String)request.getSession().getAttribute(VALIDATE_CODE);
+
+		//都转成大写后比较
 		return validateCode.toUpperCase().equals(code); 
 	}
 
@@ -56,6 +60,13 @@ public class ValidateCodeServlet extends HttpServlet {
 		}
 	}
 
+	/**
+	 * 用于重新生成验证码
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+     */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		createImage(request,response);

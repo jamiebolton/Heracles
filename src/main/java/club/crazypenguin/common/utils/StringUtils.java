@@ -1,27 +1,24 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils;
 
+import com.google.common.collect.Lists;
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+import org.springframework.web.servlet.LocaleResolver;
+
+import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.commons.lang3.StringEscapeUtils;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.LocaleResolver;
-
-import com.google.common.collect.Lists;
-
 /**
  * 字符串工具类, 继承org.apache.commons.lang3.StringUtils类
+ *
  * @author crazypenguin
- * @version 2013-05-22
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class StringUtils extends org.apache.commons.lang3.StringUtils {
 	
@@ -47,7 +44,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     
     /**
      * 转换为字节数组
-     * @param str
+     * @param bytes
      * @return
      */
     public static String toString(byte[] bytes){

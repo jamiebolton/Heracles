@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2013 <a href="httparamMap://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.service;
 
 import club.crazypenguin.common.persistence.Page;
@@ -14,8 +11,10 @@ import club.crazypenguin.modules.sys.entity.Log;
 
 /**
  * 日志Service
+ *
  * @author crazypenguin
- * @version 2014-05-16
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Service
 @Transactional(readOnly = true)

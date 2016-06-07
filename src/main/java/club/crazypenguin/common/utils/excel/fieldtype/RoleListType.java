@@ -1,21 +1,20 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils.excel.fieldtype;
+
+import club.crazypenguin.common.utils.Collections3;
+import club.crazypenguin.common.utils.SpringContextHolder;
+import club.crazypenguin.common.utils.StringUtils;
+import club.crazypenguin.modules.sys.entity.Role;
+import club.crazypenguin.modules.sys.service.SystemService;
+import com.google.common.collect.Lists;
 
 import java.util.List;
 
-import com.google.common.collect.Lists;
-import club.crazypenguin.common.utils.StringUtils;
-import club.crazypenguin.common.utils.Collections3;
-import club.crazypenguin.common.utils.SpringContextHolder;
-import club.crazypenguin.modules.sys.entity.Role;
-import club.crazypenguin.modules.sys.service.SystemService;
-
 /**
  * 字段类型转换
+ *
  * @author crazypenguin
- * @version 2013-5-29
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class RoleListType {
 

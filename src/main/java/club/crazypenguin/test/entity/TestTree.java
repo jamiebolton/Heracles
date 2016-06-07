@@ -1,18 +1,16 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.test.entity;
 
+import club.crazypenguin.common.persistence.TreeEntity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 
-import club.crazypenguin.common.persistence.TreeEntity;
+import javax.validation.constraints.NotNull;
 
 /**
  * 树结构生成Entity
  * @author crazypenguin
- * @version 2015-04-06
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class TestTree extends TreeEntity<TestTree> {
 	

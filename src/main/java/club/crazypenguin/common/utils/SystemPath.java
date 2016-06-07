@@ -1,13 +1,11 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils;
 
 /**
- * @author wanye
- * @date Dec 14, 2008
- * @version v 1.0
- * @description 得到当前应用的系统路径
+ * 得到当前应用的系统路径
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class SystemPath {
 

@@ -1,14 +1,11 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence.dialect;
 
 /**
- * 类似hibernate的Dialect,但只精简出分页部分
+ * 类似hibernate的Dialect,但只精简出分页部分,供其他方言集成的基类
  *
- * @author poplar.yfyang
- * @version 1.0 2011-11-18 下午12:31
- * @since JDK 1.5
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public interface Dialect {
 

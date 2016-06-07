@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2005-2012 springside.org.cn
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- */
 package club.crazypenguin.common.web;
 
 import club.crazypenguin.common.config.Global;
@@ -24,8 +19,9 @@ import java.util.Map.Entry;
 
 /**
  * Http与Servlet工具类.
- * @author calvin/crazypenguin
- * @version 2014-8-19
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class Servlets {
 

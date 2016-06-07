@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.persistence.proxy;
 
 import org.apache.ibatis.binding.BindingException;
@@ -9,13 +6,11 @@ import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSession;
 
 /**
- * <p>
- * .
- * </p>
+ * todo ?
  *
- * @author poplar.yfyang
- * @version 1.0 2012-05-13 上午10:06
- * @since JDK 1.5
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class PaginationMapperRegistry extends MapperRegistry {
     public PaginationMapperRegistry(Configuration config) {

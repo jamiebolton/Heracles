@@ -1,32 +1,22 @@
 package club.crazypenguin.common.utils;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
 /**
  * 文件上传工具类
  * 
- * @author yangdc
- * @date Apr 18, 2012
- * 
- * <pre>
- * </pre>
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class UploadUtils {
 	/**
@@ -168,7 +158,6 @@ public class UploadUtils {
 	 * 处理上传内容
 	 * 
 	 * @param request
-	 * @param maxSize
 	 * @return
 	 */
 //	@SuppressWarnings("unchecked")
@@ -233,12 +222,9 @@ public class UploadUtils {
 
 	/**
 	 * 保存文件
-	 * 
-	 * @param obj
-	 *            要上传的文件域
-	 * @param file
+	 * @param item
 	 * @return
-	 */
+     */
 	private String saveFile(FileItem item) {
 		String error = "true";
 		String fileName = item.getName();

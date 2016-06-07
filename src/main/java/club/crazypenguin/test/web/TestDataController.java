@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.test.web;
 
 import club.crazypenguin.common.config.Global;
@@ -23,8 +20,10 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 单表生成Controller
+ *
  * @author crazypenguin
- * @version 2015-04-06
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Controller
 @RequestMapping(value = "${adminPath}/test/testData")

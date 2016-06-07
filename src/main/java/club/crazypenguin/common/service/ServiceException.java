@@ -1,11 +1,11 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.service;
 
 /**
  * Service层公用的Exception, 从由Spring管理事务的函数中抛出时会触发事务回滚.
+ *
  * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class ServiceException extends RuntimeException {
 

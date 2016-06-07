@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils.excel.annotation;
 
 import java.lang.annotation.ElementType;
@@ -10,15 +7,18 @@ import java.lang.annotation.Target;
 
 /**
  * Excel注解定义
+ *
  * @author crazypenguin
- * @version 2013-03-10
+ * @version 1.0
+ * @created 2016/6/2
  */
 @Target({ElementType.METHOD, ElementType.FIELD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ExcelField {
 
 	/**
-	 * 导出字段名（默认调用当前字段的“get”方法，如指定导出字段为对象，请填写“对象名.对象属性”，例：“area.name”、“office.name”）
+	 * 导出字段名
+	 * 默认调用当前字段的“get”方法，如指定导出字段为对象，请填写“对象名.对象属性”，例：“area.name”、“office.name”
 	 */
 	String value() default "";
 	

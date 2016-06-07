@@ -13,7 +13,14 @@ package club.crazypenguin.common.utils;
 //import User;
 //import UserUtils;
 
-public class MobileSendMessage {
+/**
+ * 百度推送
+ *
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
+ */
+public class BaiduPushUtils {
 	
 	public static final String apiKey = "oc0yx4ST3dNQcGbXNQUNE2yn";
 	public static final String secretKey = "KpRboB9HiE6wm7I9IHtcMLnNGZY0S27W";

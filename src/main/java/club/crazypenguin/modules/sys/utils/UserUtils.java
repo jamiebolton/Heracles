@@ -3,33 +3,26 @@
  */
 package club.crazypenguin.modules.sys.utils;
 
-import java.util.List;
-
 import club.crazypenguin.common.service.BaseService;
+import club.crazypenguin.common.utils.CacheUtils;
+import club.crazypenguin.common.utils.SpringContextHolder;
+import club.crazypenguin.modules.sys.dao.*;
+import club.crazypenguin.modules.sys.entity.*;
+import club.crazypenguin.modules.sys.security.SystemAuthorizingRealm.Principal;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.UnavailableSecurityManagerException;
 import org.apache.shiro.session.InvalidSessionException;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 
-import club.crazypenguin.common.utils.CacheUtils;
-import club.crazypenguin.common.utils.SpringContextHolder;
-import club.crazypenguin.modules.sys.dao.AreaDao;
-import club.crazypenguin.modules.sys.dao.MenuDao;
-import club.crazypenguin.modules.sys.dao.OfficeDao;
-import club.crazypenguin.modules.sys.dao.RoleDao;
-import club.crazypenguin.modules.sys.dao.UserDao;
-import club.crazypenguin.modules.sys.entity.Area;
-import club.crazypenguin.modules.sys.entity.Menu;
-import club.crazypenguin.modules.sys.entity.Office;
-import club.crazypenguin.modules.sys.entity.Role;
-import club.crazypenguin.modules.sys.entity.User;
-import club.crazypenguin.modules.sys.security.SystemAuthorizingRealm.Principal;
+import java.util.List;
 
 /**
  * 用户工具类
+ *
  * @author crazypenguin
- * @version 2013-12-05
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class UserUtils {
 

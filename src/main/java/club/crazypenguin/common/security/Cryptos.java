@@ -1,12 +1,7 @@
-/**
- * Copyright (c) 2005-2012 springside.org.cn
- */
 package club.crazypenguin.common.security;
 
-import java.io.UnsupportedEncodingException;
-import java.security.GeneralSecurityException;
-import java.security.SecureRandom;
-import java.util.Arrays;
+import club.crazypenguin.common.utils.Encodes;
+import club.crazypenguin.common.utils.Exceptions;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -14,16 +9,18 @@ import javax.crypto.Mac;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-
-import club.crazypenguin.common.utils.Encodes;
-import club.crazypenguin.common.utils.Exceptions;
+import java.io.UnsupportedEncodingException;
+import java.security.GeneralSecurityException;
+import java.security.SecureRandom;
+import java.util.Arrays;
 
 /**
  * 支持HMAC-SHA1消息签名 及 DES/AES对称加密的工具类.
- * 
  * 支持Hex与Base64两种编码方式.
  * 
- * @author calvin
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class Cryptos {
 

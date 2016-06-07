@@ -1,30 +1,27 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.entity;
-
-import java.util.Date;
-import java.util.List;
-
-import javax.validation.constraints.NotNull;
 
 import club.crazypenguin.common.config.Global;
 import club.crazypenguin.common.persistence.DataEntity;
 import club.crazypenguin.common.supcan.annotation.treelist.cols.SupCol;
+import club.crazypenguin.common.utils.Collections3;
 import club.crazypenguin.common.utils.excel.annotation.ExcelField;
 import club.crazypenguin.common.utils.excel.fieldtype.RoleListType;
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.Length;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.Lists;
-import club.crazypenguin.common.utils.Collections3;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotNull;
+import java.util.Date;
+import java.util.List;
 
 /**
- * 用户Entity
+ * Domain层 - 用户
+ *
  * @author crazypenguin
- * @version 2013-12-05
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class User extends DataEntity<User> {
 

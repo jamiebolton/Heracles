@@ -1,17 +1,16 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.common.utils;
+
+import org.apache.commons.lang3.time.DateFormatUtils;
 
 import java.util.Arrays;
 import java.util.Date;
 
-import org.apache.commons.lang3.time.DateFormatUtils;
-
 /**
  * 时间计算工具类
+ *
  * @author crazypenguin
- * @version 2013-11-03
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class TimeUtils {
 	

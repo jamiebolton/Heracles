@@ -1,22 +1,20 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.interceptor;
+
+import club.crazypenguin.common.service.BaseService;
+import club.crazypenguin.common.utils.StringUtils;
+import club.crazypenguin.common.utils.UserAgentUtils;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import club.crazypenguin.common.service.BaseService;
-import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.ModelAndView;
-
-import club.crazypenguin.common.utils.StringUtils;
-import club.crazypenguin.common.utils.UserAgentUtils;
-
 /**
  * 手机端视图拦截器
+ *
  * @author crazypenguin
- * @version 2014-9-1
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class MobileInterceptor extends BaseService implements HandlerInterceptor {
 	

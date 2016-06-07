@@ -1,7 +1,7 @@
-/**
- * Copyright (c) 2005-2012 springside.org.cn
- */
 package club.crazypenguin.common.security;
+
+import club.crazypenguin.common.utils.Exceptions;
+import org.apache.commons.lang3.Validate;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,16 +9,13 @@ import java.security.GeneralSecurityException;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
 
-import org.apache.commons.lang3.Validate;
-
-import club.crazypenguin.common.utils.Exceptions;
-
 /**
  * 支持SHA-1/MD5消息摘要的工具类.
- * 
  * 返回ByteSource，可进一步被编码为Hex, Base64或UrlSafeBase64
  * 
- * @author calvin
+ * @author crazypenguin
+ * @version 1.0
+ * @created 2016/6/2
  */
 public class Digests {
 

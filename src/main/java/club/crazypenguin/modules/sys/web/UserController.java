@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.web;
 
 import club.crazypenguin.common.beanvalidator.BeanValidators;
@@ -34,8 +31,10 @@ import java.util.Map;
 
 /**
  * 用户Controller
+ *
  * @author crazypenguin
- * @version 2013-8-29
+ * @version 1.0
+ * @created 2016/5/20
  */
 @Controller
 @RequestMapping(value = "${adminPath}/sys/user")

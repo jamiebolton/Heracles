@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.act.service.ext;
 
 import org.activiti.engine.impl.interceptor.Session;
@@ -10,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Activiti Group Entity Factory
+ *
  * @author crazypenguin
- * @version 2013-11-03
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class ActGroupEntityServiceFactory implements SessionFactory {
 	

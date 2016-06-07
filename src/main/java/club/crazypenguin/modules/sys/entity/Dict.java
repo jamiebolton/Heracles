@@ -1,19 +1,17 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/jamiebolton/Heracles">Heracles</a> All rights reserved.
- */
 package club.crazypenguin.modules.sys.entity;
+
+import club.crazypenguin.common.persistence.DataEntity;
+import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAttribute;
 
-import org.hibernate.validator.constraints.Length;
-
-import club.crazypenguin.common.persistence.DataEntity;
-
 /**
  * 字典Entity
+ *
  * @author crazypenguin
- * @version 2013-05-15
+ * @version 1.0
+ * @created 2016/5/20
  */
 public class Dict extends DataEntity<Dict> {
 
